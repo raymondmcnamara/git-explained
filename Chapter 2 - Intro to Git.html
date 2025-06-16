@@ -12,5 +12,7 @@
 <p>The Git working directory is the local folder where you see and edit your project files. It reflects the current state of the project as checked out from the repository. When you make changes to files in this directory, Git can detect them as modified, and you can choose to stage and commit those changes to the repository.<p>
 <h2>Add Command</h2>
 <p>The git add command in Git is used to stage changes in your working directory for the next commit. When you modify, create, or delete files, Git tracks those changes but doesn’t include them in a commit until you explicitly add them. Running git add filename tells Git to include that file’s current state in the staging area, meaning it’s ready to be committed. You can also use git add . to stage all changes in the current directory and its subdirectories. This command is a key step in Git’s workflow, separating the process of making changes from committing them, allowing you to review and control exactly what gets committed.</p>
-p101 (do concept of staging next)
+<h2>Index/Staging Area</h2>
+In Git, the index (also known as the staging area) is an intermediate space where changes are gathered before they are committed to the repository. When you modify files in your working directory and use git add, those changes are added to the index. This lets you control which changes will be included in the next commit. The index acts as a snapshot of your intended next commit, allowing you to stage some changes while leaving others out. Once you're satisfied, running git commit saves the staged changes from the index into the repository's history.
 </div>
+p101 (do the object database next)
