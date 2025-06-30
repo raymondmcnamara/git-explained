@@ -17,5 +17,7 @@
 <h2>Object Database</p>
 <p>The Git object database is where Git stores all your project data—files, directories, and commits—as compressed objects. Each object (a blob, tree, commit, or tag) is identified by a unique hash, allowing Git to track changes efficiently and avoid duplicating data. This database lives in the .git/objects directory of your repository.</p>
 </div>
+<h2>Flow of Changes</h2>
+<div>When you change a file in Git, the update first lives in the working directory—your local filesystem. Running git add stages the change by copying a snapshot of the file into the index (also called the staging area). Then, when you run git commit, Git saves the staged snapshot to the object database in the .git directory, creating a new commit that points to that snapshot. Finally, git push sends the new commit(s) from your local repository to a remote repository, such as GitHub.</div>
 
-p101 (do the object database next)
+p109 (do file states next)
