@@ -14,10 +14,11 @@
 <p>The git add command in Git is used to stage changes in your working directory for the next commit. When you modify, create, or delete files, Git tracks those changes but doesn’t include them in a commit until you explicitly add them. Running git add filename tells Git to include that file’s current state in the staging area, meaning it’s ready to be committed. You can also use git add . to stage all changes in the current directory and its subdirectories. This command is a key step in Git’s workflow, separating the process of making changes from committing them, allowing you to review and control exactly what gets committed.</p>
 <h2>Index/Staging Area</h2>
 <p>In Git, the index (also known as the staging area) is an intermediate space where changes are gathered before they are committed to the repository. When you modify files in your working directory and use git add, those changes are added to the index. This lets you control which changes will be included in the next commit. The index acts as a snapshot of your intended next commit, allowing you to stage some changes while leaving others out. Once you're satisfied, running git commit saves the staged changes from the index into the repository's history.</p>
-<h2>Object Database</p>
+<h2>Object Database</h2>
 <p>The Git object database is where Git stores all your project data—files, directories, and commits—as compressed objects. Each object (a blob, tree, commit, or tag) is identified by a unique hash, allowing Git to track changes efficiently and avoid duplicating data. This database lives in the .git/objects directory of your repository.</p>
 </div>
 <h2>Flow of Changes</h2>
 <div>When you change a file in Git, the update first lives in the working directory—your local filesystem. Running git add stages the change by copying a snapshot of the file into the index (also called the staging area). Then, when you run git commit, Git saves the staged snapshot to the object database in the .git directory, creating a new commit that points to that snapshot. Finally, git push sends the new commit(s) from your local repository to a remote repository, such as GitHub.</div>
-
-p109 (do file states next)
+<h2>File States</h2>
+<div>In Git, a file can be in one of several states as it moves through the version control process. A file is untracked if it exists in your working directory but hasn't been added to version control yet. Once you add it using git add, it becomes tracked, meaning Git is now aware of it and will monitor changes. A tracked file can be unmodified (unchanged since the last commit), modified (changed but not yet staged for commit), or staged (changes have been marked with git add and are ready to be committed). This cycle—unmodified → modified → staged → committed—represents the typical flow of file changes in Git.</div>
+p118 (do git status next)
